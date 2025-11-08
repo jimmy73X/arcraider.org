@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARC Raiders: The Resistance Starts Now | Official Website</title>
+    <meta name="description" content="ARC Raiders is a free-to-play, cooperative third-person shooter where you fight to survive a relentless mechanized threat from orbit.">
+    <link rel="canonical" href="http://arcraider.org/">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'arc-blue': {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                        },
+                        'arc-orange': {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            200: '#fed7aa',
+                            300: '#fdba74',
+                            400: '#fb923c',
+                            500: '#f97316',
+                            600: '#ea580c',
+                            700: '#c2410c',
+                            800: '#9a3412',
+                            900: '#7c2d12',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #1e293b;
+            background-color: #f8fafc;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.9)), 
+                        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800"><rect width="1200" height="800" fill="%230f172a"/><circle cx="200" cy="200" r="80" fill="%231e40af" opacity="0.2"/><circle cx="800" cy="400" r="120" fill="%23f97316" opacity="0.1"/><polygon points="1000,150 1100,250 950,300" fill="%2360a5fa" opacity="0.15"/></svg>');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #cbd5e1, transparent);
+        }
+        
+        .feature-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        
+        .how-to-play-step {
+            counter-increment: step-counter;
+        }
+        
+        .how-to-play-step::before {
+            content: counter(step-counter);
+            background-color: #1e40af;
+            color: white;
+            border-radius: 50%;
+            width: 2rem;
+            height: 2rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 0.75rem;
+            font-weight: 600;
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        .image-placeholder {
+            background: linear-gradient(135deg, #1e40af 0%, #f97316 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            border-radius: 8px;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 4rem 1rem;
+            }
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #f97316;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .cta-button {
+            background: linear-gradient(135deg, #1e40af 0%, #f97316 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(30, 64, 175, 0.3);
+        }
+        
+        .logo-text {
+            background: linear-gradient(135deg, #1e40af 0%, #f97316 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="bg-slate-50">
+    <!-- Header with Logo -->
+    <header class="bg-white shadow-sm sticky top-0 z-10">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <!-- Logo -->
+                <div class="w-10 h-10 bg-gradient-to-br from-arc-blue-600 to-arc-orange-500 rounded-lg flex items-center justify-center">
+                    <span class="text-white font-bold text-lg">AR</span>
+                </div>
+                <h1 class="text-xl font-bold logo-text">ARC RAIDERS</h1>
+            </div>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#overview" class="nav-link text-slate-700 hover:text-slate-900 font-medium">Overview</a></li>
+                    <li><a href="#how-to-play" class="nav-link text-slate-700 hover:text-slate-900 font-medium">How to Play</a></li>
+                    <li><a href="#video" class="nav-link text-slate-700 hover:text-slate-900 font-medium">Video</a></li>
+                    <li><a href="https://store.steampowered.com/app/1808500/ARC_Raiders/" target="_blank" rel="noopener noreferrer" class="cta-button text-white px-4 py-2 rounded-md font-medium">Play Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-white py-20 md:py-32">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">ARC Raiders: The Resistance Starts Now.</h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto mb-8">Earth is No Longer Ours. The Fight to Reclaim It Has Begun.</p>
+            <a href="https://store.steampowered.com/app/1808500/ARC_Raiders/" target="_blank" rel="noopener noreferrer" class="cta-button inline-block text-white font-bold px-8 py-4 rounded-md text-lg">Join the Resistance</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <!-- Overview Section -->
+        <section id="overview" class="mb-16">
+            <h2 class="text-3xl font-bold text-slate-900 mb-8">Welcome to the Front Lines</h2>
+            
+            <div class="bg-white rounded-xl shadow-sm p-6 mb-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-6">
+                    <div>
+                        <p class="text-lg mb-6">Welcome to the front lines of humanity's last stand. ARC Raiders is a free-to-play, cooperative third-person shooter where you and your squad of Raiders fight to survive a relentless mechanized threat from orbit. Earth has been silenced, its future hanging in the balance. As a Raider, you are an unlikely hero, forged in the ruins of our world, ready to fight back against the overwhelming force of ARC.</p>
+                    </div>
+                    <div class="image-placeholder h-64">
+                        <span>Game Environment Concept Art</span>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold text-slate-800 mb-4">The World</h3>
+                        <p class="text-slate-700 mb-4">A once-familiar world lies in beautiful decay. The skies, once a symbol of freedom, are now a conduit for destruction, raining down a mysterious and unforgiving enemy known as ARC. As a Raider, you will navigate stunning yet dangerous landscapes—from forgotten urban sprawls to desolate coastlines—each holding secrets of the past and the key to our future.</p>
+                        <div class="image-placeholder h-48 mt-2">
+                            <span>Post-Apocalyptic World</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-slate-800 mb-4">The Threat - ARC</h3>
+                        <p class="text-slate-700 mb-4">ARC is an automated, merciless invasion force of colossal machines. Their origin and purpose are unknown, but their directive is clear: eradicate all forms of resistance. They are adaptive, persistent, and operate with a hive-like intelligence. From agile hunter-killers to colossal behemoths, you must learn their patterns, exploit their weaknesses, and work together to bring them down.</p>
+                        <div class="image-placeholder h-48 mt-2">
+                            <span>ARC Enemy Design</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-sm p-6 mb-8">
+                <h3 class="text-2xl font-semibold text-slate-800 mb-6">Become a Raider</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-6">
+                    <div>
+                        <p class="text-lg mb-6">You are not a soldier. You are a survivor, a scavenger, an innovator. The Raiders are a disparate group of individuals, united by a common goal: to live free and fight back. Utilize a dynamic sandbox of weapons, gadgets, and the environment itself to outsmart your enemy. Your wits, agility, and cooperation are your greatest weapons.</p>
+                    </div>
+                    <div class="image-placeholder h-64">
+                        <span>Raider Character Customization</span>
+                    </div>
+                </div>
+                
+                <h4 class="text-xl font-semibold text-slate-800 mb-4">Key Features</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="feature-card bg-slate-50 p-5 rounded-lg">
+                        <h5 class="font-semibold text-slate-900 mb-2">Cooperative Survival</h5>
+                        <p class="text-slate-700">Team up with friends in a PvE experience built on teamwork and emergent gameplay. Success depends on your ability to coordinate, revive, and strategize together.</p>
+                    </div>
+                    <div class="feature-card bg-slate-50 p-5 rounded-lg">
+                        <h5 class="font-semibold text-slate-900 mb-2">A Dynamic & Living World</h5>
+                        <p class="text-slate-700">The world of ARC Raiders is ever-changing. ARC's patrols and attacks are unpredictable, creating unique and thrilling combat scenarios every time you drop in.</p>
+                    </div>
+                    <div class="feature-card bg-slate-50 p-5 rounded-lg">
+                        <h5 class="font-semibold text-slate-900 mb-2">Sandbox Combat</h5>
+                        <p class="text-slate-700">There is no single way to victory. Use physics to your advantage, set traps, employ a diverse arsenal, and creatively combine your tools to overcome impossible odds.</p>
+                    </div>
+                    <div class="feature-card bg-slate-50 p-5 rounded-lg">
+                        <h5 class="font-semibold text-slate-900 mb-2">The Raider's Journey</h5>
+                        <p class="text-slate-700">Progress, customize your unique Raider, and master the arts of guerrilla warfare to become a legend of the resistance.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-gradient-to-br from-arc-blue-700 to-arc-orange-600 text-white rounded-xl shadow-sm p-8 text-center">
+                <h3 class="text-2xl font-bold mb-4">The Call to Arms</h3>
+                <p class="text-lg mb-6">The sky has fallen. It's time to rise up. Gather your squad, aim high, and join the fight to reclaim our world.</p>
+                <p class="text-xl font-semibold">Join the Resistance. Become a Raider.</p>
+                <a href="https://store.steampowered.com/app/1808500/ARC_Raiders/" target="_blank" rel="noopener noreferrer" class="cta-button inline-block text-white font-bold px-8 py-3 rounded-md mt-6">Play Now on Steam</a>
+            </div>
+        </section>
+        
+        <div class="section-divider my-12"></div>
+        
+        <!-- Video Section -->
+        <section id="video" class="mb-16">
+            <h2 class="text-3xl font-bold text-slate-900 mb-8">Official Gameplay Trailer</h2>
+            <div class="video-container">
+                <!-- 修复后的YouTube嵌入代码 -->
+                <iframe src="https://www.youtube.com/embed/IpeJjQDXNAE?rel=0&modestbranding=1" title="ARC Raiders Official Gameplay Trailer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <p class="text-center text-slate-600 mt-4">If the video doesn't load, <a href="https://youtu.be/IpeJjQDXNAE" target="_blank" class="text-arc-blue-600 hover:underline">watch it directly on YouTube</a></p>
+        </section>
+        
+        <div class="section-divider my-12"></div>
+        
+        <!-- How to Play Section -->
+        <section id="how-to-play" class="mb-16">
+            <h2 class="text-3xl font-bold text-slate-900 mb-2">How to Play ARC Raiders</h2>
+            <p class="text-xl text-slate-700 mb-8">A Guide to Surviving the ARC Threat</p>
+            
+            <div class="bg-white rounded-xl shadow-sm p-6 mb-8">
+                <h3 class="text-2xl font-semibold text-slate-800 mb-6">Squad Up. Fight Smart. Survive the Onslaught.</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    <div>
+                        <h4 class="text-xl font-semibold text-slate-800 mb-4">The Core Loop: Cooperation and Chaos</h4>
+                        <p class="text-lg mb-6">ARC Raiders is a free-to-play, third-person, cooperative shooter where teamwork and adaptability are your keys to survival. The core gameplay loop revolves around forming a squad, deploying into a hostile open world, completing objectives, engaging massive ARC machines, and extracting against all odds.</p>
+                    </div>
+                    <div class="image-placeholder h-64">
+                        <span>Gameplay Screenshot</span>
+                    </div>
+                </div>
+                
+                <div class="space-y-8">
+                    <div class="how-to-play-step">
+                        <h5 class="text-lg font-semibold text-slate-900 mb-2">Before the Drop: Assemble Your Squad and Loadout</h5>
+                        <p class="text-slate-700 mb-4">Success starts before you even set foot on the battlefield.</p>
+                        <ul class="list-disc pl-6 text-slate-700 space-y-2">
+                            <li><strong>Form Your Fireteam:</strong> Team up with friends or matchmake with other players. A coordinated squad of 2-3 Raiders is essential for tackling the challenges ahead.</li>
+                            <li><strong>Choose Your Tools:</strong> Customize your loadout. This includes selecting primary and secondary weapons (e.g., assault rifles, sniper rifles, shotguns) and a suite of tactical gadgets. Your choices should complement your team's composition.</li>
+                            <li><strong>Key Gadgets:</strong> The Grappling Hook is vital for rapid mobility, scaling cliffs, and evading enemies. The Turret provides automated covering fire. Other gadgets like grenades, shields, or healing devices will dictate your role in the squad.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="how-to-play-step">
+                        <h5 class="text-lg font-semibold text-slate-900 mb-2">On the Ground: Tactics and Survival</h5>
+                        <p class="text-slate-700 mb-4">Once deployed, the world is dynamic and dangerous. Your mission is not just to shoot, but to outsmart your enemy.</p>
+                        <ul class="list-disc pl-6 text-slate-700 space-y-2">
+                            <li><strong>Move Like a Raider:</strong> Use the environment to your advantage. The grappling hook isn't just for travel—use it to gain high ground for a tactical advantage, swiftly flank enemies, or escape a deadly situation. Stay on the move; standing still is a death sentence.</li>
+                            <li><strong>Identify and Exploit Enemy Weak Points:</strong> ARC machines are heavily armored, but they have vulnerabilities. Scan your targets and aim for glowing weak points, power cores, or exposed joints to deal maximum damage.</li>
+                            <li><strong>Use Physics as a Weapon:</strong> The world is your arsenal. Kick objects to create distractions, use explosive barrels to trigger chain reactions, and leverage the environment to set up ambushes.</li>
+                            <li><strong>Ping System:</strong> Constant communication is key. Use the intuitive ping system to mark enemy locations, highlight resources, or point out strategic positions to your teammates without needing voice chat.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center my-8">
+                        <div class="image-placeholder h-64">
+                            <span>Combat Strategy</span>
+                        </div>
+                        <div>
+                            <div class="how-to-play-step">
+                                <h5 class="text-lg font-semibold text-slate-900 mb-2">Engaging the ARC: Strategy Over Brute Force</h5>
+                                <p class="text-slate-700 mb-4">You will encounter a variety of ARC enemies, from small scouts to towering behemoths.</p>
+                                <ul class="list-disc pl-6 text-slate-700 space-y-2">
+                                    <li><strong>Scout and Plan:</strong> Don't rush in blindly. Observe patrol routes and identify the types of enemies you're facing.</li>
+                                    <li><strong>Divide and Conquer:</strong> In a squad, assign roles. Have one player draw aggro while others flank. Focus fire on a single high-priority target to eliminate threats quickly.</li>
+                                    <li><strong>Adapt on the Fly:</strong> The ARC adapts. If a direct assault isn't working, change tactics. Fall back to a more defensible position, use hit-and-run tactics, or set up a kill zone with traps and turrets.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="how-to-play-step">
+                        <h5 class="text-lg font-semibold text-slate-900 mb-2">Teamwork is Non-Negotiable</h5>
+                        <p class="text-slate-700 mb-4">This is the most important rule of being a Raider.</p>
+                        <ul class="list-disc pl-6 text-slate-700 space-y-2">
+                            <li><strong>Revive and Support:</strong> When a teammate falls, prioritize their revival. Cover them while they get back up. Share resources and ammo.</li>
+                            <li><strong>Stick Together:</strong> A lone Raider is a dead Raider. There is strength in numbers. Coordinated fire and shared gadgets will overcome challenges that are impossible to face alone.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="how-to-play-step">
+                        <h5 class="text-lg font-semibold text-slate-900 mb-2">The Goal: Complete and Extract</h5>
+                        <p class="text-slate-700 mb-4">Your mission isn't over until you've safely extracted.</p>
+                        <ul class="list-disc pl-6 text-slate-700 space-y-2">
+                            <li><strong>Complete Dynamic Objectives:</strong> The world will present you with various tasks, from destroying key ARC assets to securing valuable intel. Work together to complete them.</li>
+                            <li><strong>Survive the Extraction:</strong> Once your main objective is complete, you must call for and secure an extraction point. This often triggers a final, intense wave of ARC forces. Hold the line, protect the zone, and ensure your entire squad makes it out alive to claim your rewards.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="mt-8 p-6 bg-gradient-to-r from-arc-blue-50 to-arc-orange-50 rounded-lg border border-arc-blue-200">
+                    <h5 class="text-lg font-semibold text-slate-900 mb-2">Become a Master Raider</h5>
+                    <p class="text-slate-700">Master the movement, learn the enemy patterns, communicate with your team, and creatively use every tool at your disposal. The ARC is a relentless foe, but with skill and cooperation, you can fight back and reclaim our world.</p>
+                    <p class="text-slate-900 font-medium mt-4">See you on the front lines, Raider.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-8 h-8 bg-gradient-to-br from-arc-blue-600 to-arc-orange-500 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold">AR</span>
+                        </div>
+                        <h2 class="text-xl font-bold text-white">ARC RAIDERS</h2>
+                    </div>
+                    <p class="mt-2 text-slate-300">The Resistance Starts Now.</p>
+                </div>
+                
+                <div class="text-center md:text-right">
+                    <a href="https://store.steampowered.com/app/1808500/ARC_Raiders/" target="_blank" rel="noopener noreferrer" class="cta-button inline-block text-white font-bold px-6 py-3 rounded-md">Play Now on Steam</a>
+                    <p class="mt-4 text-slate-400 text-sm">© 2023 ARC Raiders. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Add smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -72,7 +72,7 @@
         
         .hero-section {
             background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.9)), 
-                        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800"><rect width="1200" height="800" fill="%230f172a"/><circle cx="200" cy="200" r="80" fill="%231e40af" opacity="0.2"/><circle cx="800" cy="400" r="120" fill="%23f97316" opacity="0.1"/><polygon points="1000,150 1100,250 950,300" fill="%2360a5fa" opacity="0.15"/></svg>');
+                        url('http://arcraider.org/A1.png');
             background-size: cover;
             background-position: center;
         }
@@ -128,14 +128,14 @@
             font-family: 'Orbitron', sans-serif;
         }
         
-        .image-placeholder {
-            background: linear-gradient(135deg, #1e40af 0%, #f97316 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: 600;
+        .game-image {
             border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .game-image:hover {
+            transform: scale(1.02);
         }
         
         @media (max-width: 768px) {
@@ -197,6 +197,7 @@
                     <li><a href="#overview" class="nav-link text-slate-700 hover:text-slate-900 font-medium">Overview</a></li>
                     <li><a href="#how-to-play" class="nav-link text-slate-700 hover:text-slate-900 font-medium">How to Play</a></li>
                     <li><a href="#video" class="nav-link text-slate-700 hover:text-slate-900 font-medium">Video</a></li>
+                    <li><a href="http://arcraider.org/blog.html" class="nav-link text-slate-700 hover:text-slate-900 font-medium">Blog</a></li>
                     <li><a href="https://store.steampowered.com/app/1808500/ARC_Raiders/" target="_blank" rel="noopener noreferrer" class="cta-button text-white px-4 py-2 rounded-md font-medium">Play Now</a></li>
                 </ul>
             </nav>
@@ -223,8 +224,8 @@
                     <div>
                         <p class="text-lg mb-6">Welcome to the front lines of humanity's last stand. ARC Raiders is a free-to-play, cooperative third-person shooter where you and your squad of Raiders fight to survive a relentless mechanized threat from orbit. Earth has been silenced, its future hanging in the balance. As a Raider, you are an unlikely hero, forged in the ruins of our world, ready to fight back against the overwhelming force of ARC.</p>
                     </div>
-                    <div class="image-placeholder h-64">
-                        <span>Game Environment Concept Art</span>
+                    <div>
+                        <img src="http://arcraider.org/A2.png" alt="ARC Raiders Game Environment" class="w-full h-64 object-cover game-image">
                     </div>
                 </div>
                 
@@ -232,16 +233,12 @@
                     <div>
                         <h3 class="text-xl font-semibold text-slate-800 mb-4">The World</h3>
                         <p class="text-slate-700 mb-4">A once-familiar world lies in beautiful decay. The skies, once a symbol of freedom, are now a conduit for destruction, raining down a mysterious and unforgiving enemy known as ARC. As a Raider, you will navigate stunning yet dangerous landscapes—from forgotten urban sprawls to desolate coastlines—each holding secrets of the past and the key to our future.</p>
-                        <div class="image-placeholder h-48 mt-2">
-                            <span>Post-Apocalyptic World</span>
-                        </div>
+                        <img src="http://arcraider.org/A3.png" alt="Post-Apocalyptic World in ARC Raiders" class="w-full h-48 object-cover game-image mt-2">
                     </div>
                     <div>
                         <h3 class="text-xl font-semibold text-slate-800 mb-4">The Threat - ARC</h3>
                         <p class="text-slate-700 mb-4">ARC is an automated, merciless invasion force of colossal machines. Their origin and purpose are unknown, but their directive is clear: eradicate all forms of resistance. They are adaptive, persistent, and operate with a hive-like intelligence. From agile hunter-killers to colossal behemoths, you must learn their patterns, exploit their weaknesses, and work together to bring them down.</p>
-                        <div class="image-placeholder h-48 mt-2">
-                            <span>ARC Enemy Design</span>
-                        </div>
+                        <img src="http://arcraider.org/A4.png" alt="ARC Enemy Design" class="w-full h-48 object-cover game-image mt-2">
                     </div>
                 </div>
             </div>
@@ -252,8 +249,8 @@
                     <div>
                         <p class="text-lg mb-6">You are not a soldier. You are a survivor, a scavenger, an innovator. The Raiders are a disparate group of individuals, united by a common goal: to live free and fight back. Utilize a dynamic sandbox of weapons, gadgets, and the environment itself to outsmart your enemy. Your wits, agility, and cooperation are your greatest weapons.</p>
                     </div>
-                    <div class="image-placeholder h-64">
-                        <span>Raider Character Customization</span>
+                    <div>
+                        <img src="http://arcraider.org/A5.png" alt="Raider Character in ARC Raiders" class="w-full h-64 object-cover game-image">
                     </div>
                 </div>
                 
@@ -292,7 +289,7 @@
         <section id="video" class="mb-16">
             <h2 class="text-3xl font-bold text-slate-900 mb-8">Official Gameplay Trailer</h2>
             <div class="video-container">
-                <!-- 修复后的YouTube嵌入代码 -->
+                <!-- YouTube嵌入代码 -->
                 <iframe src="https://www.youtube.com/embed/IpeJjQDXNAE?rel=0&modestbranding=1" title="ARC Raiders Official Gameplay Trailer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <p class="text-center text-slate-600 mt-4">If the video doesn't load, <a href="https://youtu.be/IpeJjQDXNAE" target="_blank" class="text-arc-blue-600 hover:underline">watch it directly on YouTube</a></p>
@@ -313,8 +310,8 @@
                         <h4 class="text-xl font-semibold text-slate-800 mb-4">The Core Loop: Cooperation and Chaos</h4>
                         <p class="text-lg mb-6">ARC Raiders is a free-to-play, third-person, cooperative shooter where teamwork and adaptability are your keys to survival. The core gameplay loop revolves around forming a squad, deploying into a hostile open world, completing objectives, engaging massive ARC machines, and extracting against all odds.</p>
                     </div>
-                    <div class="image-placeholder h-64">
-                        <span>Gameplay Screenshot</span>
+                    <div>
+                        <img src="http://arcraider.org/A6.png" alt="ARC Raiders Gameplay" class="w-full h-64 object-cover game-image">
                     </div>
                 </div>
                 
@@ -341,8 +338,8 @@
                     </div>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center my-8">
-                        <div class="image-placeholder h-64">
-                            <span>Combat Strategy</span>
+                        <div>
+                            <img src="http://arcraider.org/A7.png" alt="Combat Strategy in ARC Raiders" class="w-full h-64 object-cover game-image">
                         </div>
                         <div>
                             <div class="how-to-play-step">
@@ -401,6 +398,9 @@
                 
                 <div class="text-center md:text-right">
                     <a href="https://store.steampowered.com/app/1808500/ARC_Raiders/" target="_blank" rel="noopener noreferrer" class="cta-button inline-block text-white font-bold px-6 py-3 rounded-md">Play Now on Steam</a>
+                    <a href="http://arcraider.org/Privacy Policy.html" target="_blank" rel="noopener noreferrer" class="cta-button inline-block text-white font-bold px-6 py-3 rounded-md">Privacy Policy</a>
+                    <a href="http://arcraider.org/Terms of Service.html" target="_blank" rel="noopener noreferrer" class="cta-button inline-block text-white font-bold px-6 py-3 rounded-md">Terms of Service</a>
+                    <a href="http://arcraider.org/Terms of Service.html" target="_blank" rel="noopener noreferrer" class="cta-button inline-block text-white font-bold px-6 py-3 rounded-md">Contact Us</a>
                     <p class="mt-4 text-slate-400 text-sm">© 2023 ARC Raiders. All rights reserved.</p>
                 </div>
             </div>

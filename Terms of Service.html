@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - ARC Raiders | Official Website</title>
+    <meta name="description" content="ARC Raiders Terms of Service - Please read these terms carefully before using our services.">
+    <link rel="canonical" href="http://arcraider.org/terms-of-service">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'arc-blue': {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                        },
+                        'arc-orange': {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            200: '#fed7aa',
+                            300: '#fdba74',
+                            400: '#fb923c',
+                            500: '#f97316',
+                            600: '#ea580c',
+                            700: '#c2410c',
+                            800: '#9a3412',
+                            900: '#7c2d12',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #1e293b;
+            background-color: #f8fafc;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.9)), 
+                        url('https://onlinegamedayday.com/m1.png');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #cbd5e1, transparent);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #f97316;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .cta-button {
+            background: linear-gradient(135deg, #1e40af 0%, #f97316 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(30, 64, 175, 0.3);
+        }
+        
+        .logo-text {
+            background: linear-gradient(135deg, #1e40af 0%, #f97316 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .terms-content {
+            max-height: 60vh;
+            overflow-y: auto;
+            padding-right: 1rem;
+        }
+        
+        .terms-content::-webkit-scrollbar {
+            width: 6px;
+        }
+        
+        .terms-content::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        
+        .terms-content::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+        
+        .terms-content::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 4rem 1rem;
+            }
+            
+            .terms-content {
+                max-height: 50vh;
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-50">
+    <!-- Header with Logo -->
+    <header class="bg-white shadow-sm sticky top-0 z-10">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <!-- Logo -->
+                <div class="w-10 h-10 bg-gradient-to-br from-arc-blue-600 to-arc-orange-500 rounded-lg flex items-center justify-center">
+                    <span class="text-white font-bold text-lg">AR</span>
+                </div>
+                <h1 class="text-xl font-bold logo-text">ARC RAIDERS</h1>
+            </div>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="index.html" class="nav-link text-slate-700 hover:text-slate-900 font-medium">Home</a></li>
+                    <li><a href="privacy-policy.html" class="nav-link text-slate-700 hover:text-slate-900 font-medium">Privacy</a></li>
+                    <li><a href="https://store.steampowered.com/app/1808500/ARC_Raiders/" target="_blank" rel="noopener noreferrer" class="cta-button text-white px-4 py-2 rounded-md font-medium">Play Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Terms of Service</h1>
+            <p class="text-xl max-w-3xl mx-auto">Please read these terms carefully before using ARC Raiders services</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <div class="bg-white rounded-xl shadow-sm p-8 mb-8">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-2">ARC Raiders Terms of Service</h2>
+                    <p class="text-slate-600">Last updated: November 9, 2025</p>
+                </div>
+                <div class="mt-4 md:mt-0">
+                    <a href="#acceptance" class="text-arc-blue-600 hover:underline mr-4">Quick Jump</a>
+                    <button onclick="window.print()" class="bg-slate-100 text-slate-700 px-4 py-2 rounded-md hover:bg-slate-200 transition-colors">
+                        Print Terms
+                    </button>
+                </div>
+            </div>
+            
+            <div class="terms-content mb-8 p-4 border border-slate-200 rounded-lg">
+                <div class="prose max-w-none">
+                    <section id="acceptance" class="mb-8">
+                        <h3 class="text-xl font-semibold text-slate-800 mb-4">1. Acceptance of Terms</h3>
+                        <p class="text-slate-700 mb-4">By accessing or using ARC Raiders ("the Game"), our website, or any related services ("Services"), you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using or accessing the Game and Services.</p>
+                    </section>
+                    
+                    <section class="mb-8">
+                        <h3 class="text-xl font-semibold text-slate-800 mb-4">2. Description of Service</h3>
+                        <p class="text-slate-700 mb-4">ARC Raiders is a free-to-play, cooperative third-person shooter game developed and published by Embark Studios. The Services include the Game, official websites, forums, and any other services provided by Embark Studios related to ARC Raiders.</p>
+                    </section>
+                    
+                    <section class="mb-8">
+                        <h3 class="text-xl font-semibold text-slate-800 mb-4">3. Account Registration and Security</h3>
+                        <p class="text-slate-700 mb-4">To access certain features of the Game, you may be required to register for an account. You agree to:</p>
+                        <ul class="list-disc pl-6 text-slate-700 space-y-2 mb-4">
+                            <li>Provide accurate, current, and complete information during the registration process</li>
+                            <li>Maintain and promptly update your account information</li>
+                            <li>Maintain the security of your password and accept all risks of unauthorized access to your account</li>
+                            <li>Notify us immediately if you discover or otherwise suspect any security breaches related to the Services</li>
+                            <li>Take responsibility for all activities that occur under your account</li>
+                        </ul>
+                    </section>
+                    
+                    <section class="mb-8">
+                        <h3 class="text-xl font-semibold text-slate-800 mb-4">4. License Grant and Restrictions</h3>
+                        <p class="text-slate-700 mb-4">Subject to your compliance with these Terms, Embark Studios grants you a limited, non-exclusive, non-transferable, non-sublicensable license to access and use the Services for your personal, non-commercial use. You agree not to:</p>
+                        <ul class="list-disc pl-6 text-slate-700 space-y-2 mb-4">
+                            <li>Copy, modify, or create derivative works based on the Services</li>
+                            <li>Distribute, transfer, sublicense, lease, lend, or rent the Services to any third party</li>
+                            <li>Reverse engineer, decompile, or disassemble the Services</li>
+                            <li>Make the functionality of the Services available to multiple users through any means</li>
+                            <li>Use the Services for any commercial purpose without our express written consent</li>
+                        </ul>
+                    </section>
+                    
+                    <section class="mb-8">
+                        <h3 class="text-xl font-semibold text-slate-800 mb-4">5. User Conduct</h3>
+                        <p class="text-slate-700 mb-4">You agree not to engage in any of the following prohibited activities:</p>
+                        <ul class="list-disc pl-6 text-slate-700 space-y-2 mb-4">
+                            <li>Cheating, hacking, or using any unauthorized third-party software</li>
+                            <li>Harassing, threatening, or bullying other players</li>
+                            <li>Sharing inappropriate, offensive, or explicit content</li>
+                            <li>Impersonating Embark Studios staff or other players</li>
+                            <li>Engaging in any activity that disrupts or interferes with the Services</li>
+                            <li>Attempting to gain unauthorized access to the Services or related systems</li>
+                            <li>Violating any applicable laws or regulations</li>
+                        </ul>
+                    </section>
+                    
+                    <section class="mb-8">
+                        <h3 class="text-xl font-semibold text-slate-800 mb-4">6. Virtual Items and Currency</h3>
+                        <p class="text-slate-700 mb-4">ARC Raiders may include virtual currency, items, or other digital assets ("Virtual Items"). You acknowledge that:</p>
+                        <ul class="list-disc pl-6 text-slate-700 space-y-2 mb-4">
+                            <li>Virtual Items have no real-world value and are not redeemable for any sum of money</li>
+                            <li>Virtual Items are licensed, not sold, to you</li>
+                            <li>Embark Studios has the right to manage, regulate, modify, or eliminate Virtual Items at any time</li>
+                            <li>All purchases of Virtual Items are final and non-refundable</li>
+                            <li>The transfer of Virtual Items between accounts is prohibited unless expressly permitted</li>
+                        </ul>
+                    </section>
+                    
+                    <section class="mb-8">
+                        <h3 class="text-xl font-semibold text-slate-800 mb-4">7. Intellectual Property Rights</h3>
+                        <p class="text-slate-700 mb-4">The Services, including all content, visual elements, graphics, design, compilation, magnetic translation, digital conversion, and other matters related to the Services are protected under applicable copyrights, trademarks, and other proprietary rights. The copying, redistribution, use, or publication by you of any such matters or any part of the Services is strictly prohibited.</p>
+                    </section>
+                    
+                    <section class="mb-8">
+                        <h3 class="text-xl font-semibold text-slate-800 mb-4">8. Termination</h3>
+                        <p class="text-slate-700 mb-4">These Terms are effective until terminated by either you or Embark Studios. You may terminate these Terms at any time by permanently discontinuing use of the Services. Embark Studios may terminate these Terms, or suspend or terminate your access to the Services, at any time for any reason, including if we suspect that you have failed to comply with any provision of these Terms.</p>
+                    </section>
+                    
+                    <section class="mb-8">
+                        <h3 class="text-xl font-semibold text-slate-800 mb-4">9. Disclaimer of Warranties</h3>
+                        <p class="text-slate-700 mb-4">THE SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED. TO THE FULLEST EXTENT PERMISSIBLE PURSUANT TO APPLICABLE LAW, EMBARK STUDIOS DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.</p>
+                    </section>
+                    
+                    <section class="mb-8">
+                        <h3 class="text-xl font-semibold text-slate-800 mb-4">10. Limitation of Liability</h3>
+                        <p class="text-slate-700 mb-4">IN NO EVENT SHALL EMBARK STUDIOS, ITS DIRECTORS, OFFICERS, EMPLOYEES, OR AGENTS BE LIABLE FOR ANY INDIRECT, SPECIAL, INCIDENTAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF DATA, LOSS OF PROFITS, OR OTHER INTANGIBLE LOSSES, ARISING OUT OF OR RELATED TO YOUR USE OR INABILITY TO USE THE SERVICES.</p>
+                    </section>
+                    
+                    <section class="mb-8">
+                        <h3 class="text-xl font-semibold text-slate-800 mb-4">11. Indemnification</h3>
+                        <p class="text-slate-700 mb-4">You agree to indemnify, defend, and hold harmless Embark Studios and its affiliates, officers, directors, employees, and agents from and against any and all claims, liabilities, damages, losses, costs, expenses, or fees (including reasonable attorneys' fees) that such parties may incur as a result of or arising from your use of the Services or your violation of these Terms.</p>
+                    </section>
+                    
+                    <section class="mb-8">
+                        <h3 class="text-xl font-semibold text-slate-800 mb-4">12. Governing Law</h3>
+                        <p class="text-slate-700 mb-4">These Terms shall be governed by and construed in accordance with the laws of Sweden, without regard to its conflict of law provisions. You agree to submit to the personal jurisdiction of the courts located in Stockholm, Sweden for any actions for which we retain the right to seek injunctive or other equitable relief.</p>
+                    </section>
+                    
+                    <section class="mb-8">
+                        <h3 class="text-xl font-semibold text-slate-800 mb-4">13. Changes to Terms</h3>
+                        <p class="text-slate-700 mb-4">Embark Studios reserves the right, at its sole discretion, to modify or replace these Terms at any time. If a revision is material, we will provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.</p>
+                    </section>
+                    
+                    <section class="mb-8">
+                        <h3 class="text-xl font-semibold text-slate-800 mb-4">14. Contact Information</h3>
+                        <p class="text-slate-700 mb-4">If you have any questions about these Terms, please contact us at:</p>
+                        <p class="text-slate-700 mb-2">Embark Studios AB</p>
+                        <p class="text-slate-700 mb-2">Riddargatan 17D</p>
+                        <p class="text-slate-700 mb-2">114 57 Stockholm, Sweden</p>
+                        <p class="text-slate-700 mb-2">Email: legal@embark-studios.com</p>
+                    </section>
+                </div>
+            </div>
+            
+            <div class="bg-slate-50 p-6 rounded-lg border border-slate-200">
+                <h3 class="text-lg font-semibold text-slate-800 mb-4">Acceptance of Terms</h3>
+                <p class="text-slate-700 mb-4">By using ARC Raiders, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.</p>
+                <div class="flex items-center">
+                    <input type="checkbox" id="agree-terms" class="mr-2 h-4 w-4 text-arc-blue-600 focus:ring-arc-blue-500 border-slate-300 rounded">
+                    <label for="agree-terms" class="text-slate-700">I have read and agree to the Terms of Service</label>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 bg-gradient-to-br from-arc-blue-600 to-arc-orange-500 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold">AR</span>
+                        </div>
+                        <h2 class="text-xl font-bold text-white">ARC RAIDERS</h2>
+                    </div>
+                    <p class="text-slate-300 mb-4">The Resistance Starts Now. Join the fight to reclaim our world from the relentless ARC threat.</p>
+                    <a href="https://store.steampowered.com/app/1808500/ARC_Raiders/" target="_blank" rel="noopener noreferrer" class="cta-button inline-block text-white font-bold px-6 py-3 rounded-md">Play Now on Steam</a>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="terms-of-service.html" class="text-slate-300 hover:text-white transition-colors">Terms of Service</a></li>
+                        <li><a href="privacy-policy.html" class="text-slate-300 hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="cookies.html" class="text-slate-300 hover:text-white transition-colors">Cookie Policy</a></li>
+                        <li><a href="eula.html" class="text-slate-300 hover:text-white transition-colors">EULA</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Support</h3>
+                    <ul class="space-y-2">
+                        <li><a href="faq.html" class="text-slate-300 hover:text-white transition-colors">FAQ</a></li>
+                        <li><a href="contact.html" class="text-slate-300 hover:text-white transition-colors">Contact Us</a></li>
+                        <li><a href="https://discord.gg/arcraiders" target="_blank" class="text-slate-300 hover:text-white transition-colors">Community Discord</a></li>
+                        <li><a href="status.html" class="text-slate-300 hover:text-white transition-colors">Server Status</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-700 mt-8 pt-8 text-center">
+                <p class="text-slate-400 text-sm">© 2023 Embark Studios AB. All rights reserved. ARC Raiders and the ARC Raiders logo are trademarks of Embark Studios AB.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Add smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

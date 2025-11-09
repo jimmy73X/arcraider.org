@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - ARC Raiders | Official Website</title>
+    <meta name="description" content="ARC Raiders Privacy Policy - Learn how we collect, use, and protect your personal information.">
+    <link rel="canonical" href="http://arcraider.org/privacy-policy">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'arc-blue': {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                        },
+                        'arc-orange': {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            200: '#fed7aa',
+                            300: '#fdba74',
+                            400: '#fb923c',
+                            500: '#f97316',
+                            600: '#ea580c',
+                            700: '#c2410c',
+                            800: '#9a3412',
+                            900: '#7c2d12',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #1e293b;
+            background-color: #f8fafc;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.9)), 
+                        url('https://onlinegamedayday.com/m1.png');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #cbd5e1, transparent);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #f97316;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .cta-button {
+            background: linear-gradient(135deg, #1e40af 0%, #f97316 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(30, 64, 175, 0.3);
+        }
+        
+        .logo-text {
+            background: linear-gradient(135deg, #1e40af 0%, #f97316 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .policy-content {
+            max-height: 60vh;
+            overflow-y: auto;
+            padding-right: 1rem;
+        }
+        
+        .policy-content::-webkit-scrollbar {
+            width: 6px;
+        }
+        
+        .policy-content::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        
+        .policy-content::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+        
+        .policy-content::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+        
+        .info-card {
+            background: linear-gradient(135deg, #eff6ff 0%, #fff7ed 100%);
+            border-left: 4px solid #3b82f6;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 4rem 1rem;
+            }
+            
+            .policy-content {
+                max-height: 50vh;
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-50">
+    <!-- Header with Logo -->
+    <header class="bg-white shadow-sm sticky top-0 z-10">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <!-- Logo -->
+                <div class="w-10 h-10 bg-gradient-to-br from-arc-blue-600 to-arc-orange-500 rounded-lg flex items-center justify-center">
+                    <span class="text-white font-bold text-lg">AR</span>
+                </div>
+                <h1 class="text-xl font-bold logo-text">ARC RAIDERS</h1>
+            </div>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="index.html" class="nav-link text-slate-700 hover:text-slate-900 font-medium">Home</a></li>
+                    <li><a href="terms-of-service.html" class="nav-link text-slate-700 hover:text-slate-900 font-medium">Terms</a></li>
+                    <li><a href="https://store.steampowered.com/app/1808500/ARC_Raiders/" target="_blank" rel="noopener noreferrer" class="cta-button text-white px-4 py-2 rounded-md font-medium">Play Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Privacy Policy</h1>
+            <p class="text-xl max-w-3xl mx-auto">Your privacy is important to us. Learn how we protect your information.</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <div class="bg-white rounded-xl shadow-sm p-8 mb-8">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-2">ARC Raiders Privacy Policy</h2>
+                    <p class="text-slate-600">Last updated: November 9, 2025</p>
+                </div>
+                <div class="mt-4 md:mt-0">
+                    <a href="#overview" class="text-arc-blue-600 hover:underline mr-4">Quick Jump</a>
+                    <button onclick="window.print()" class="bg-slate-100 text-slate-700 px-4 py-2 rounded-md hover:bg-slate-200 transition-colors">
+                        Print Policy
+                    </button>
+                </div>
+            </div>
+            
+            <div class="info-card p-6 rounded-lg mb-8">
+                <h3 class="text-lg font-semibold text-slate-800 mb-2">Key Points</h3>
+                <p class="text-slate-700">This summary highlights key points from our Privacy Policy. Please read the full policy for complete information.</p>
+                <ul class="list-disc pl-6 text-slate-700 mt-2 space-y-1">
+                    <li>We collect information necessary to provide and improve our services</li>
+                    <li>We do not sell your personal information to third parties</li>
+                    <li>You have rights regarding your personal information</li>
+                    <li>We implement security measures to protect your data</li>
+                </ul>
+            </div>
+            
+            <div class="policy-content mb-8 p-4 border border-slate-200 rounded-lg">
+                <div class="prose max-w-none">
+                    <section id="overview" class="mb-8">
+                        <h3 class="text-xl font-semibold text-slate-800 mb-4">1. Overview</h3>
+                        <p class="text-slate-700 mb-4">Embark Studios AB ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our game ARC Raiders ("the Game"), our website, and related services (collectively, "Services").</p>
+                        <p class="text-slate-700 mb-4">Please read this Privacy Policy carefully. By accessing or using our Services, you agree to the collection and use of information in accordance with this policy. If you do not agree with the terms of this Privacy Policy, please do not access the Services.</p>
+                    </section>
+                    
+                    <section class="mb-8">
+                        <h3 class="text-xl font-semibold text-slate-800 mb-4">2. Information We Collect</h3>
+                        <p class="text-slate-700 mb-4">We collect several types of information from and about users of our Services:</p>
+                        
+                        <h4 class="text-lg font-medium text-slate-800 mb-2">Personal Information</h4>
+                        <p class="text-slate-700 mb-4">When you create an account or use our Services, we may collect personal information that can be used to identify you, such as:</p>
+                        <ul class="list-disc pl-6 text-slate-700 space-y-2 mb-4">
+                            <li>Email address</li>
+                            <li>Username and password</li>
+                            <li>Date of birth (for age verification)</li>
+                            <li>Country of residence</li>
+                            <li>Payment information (processed by third-party payment providers)</li>
+                        </ul>
+                        
+                        <h4 class="text-lg font-medium text-slate-800 mb-2">Gameplay Information</h4>
+                        <p class="text-slate-700 mb-4">When you play ARC Raiders, we collect information about your gameplay, including:</p>
+                        <ul class="list-disc pl-6 text-slate-700 space-y-2 mb-4">
+                            <li>Game progress, achievements, and statistics</li>
+                            <li>In-game purchases and virtual item inventory</li>
+                            <li>Player interactions and communications</li>
+                            <li>Match data and performance metrics</li>
+                        </ul>
+                        
+                        <h4 class="text-lg font-medium text-slate-800 mb-2">Technical Information</h4>
+                        <p class="text-slate-700 mb-4">We automatically collect certain technical information when you use our Services:</p>
+                        <ul class="list-disc pl-6 text-slate-700 space-y-2 mb-4">
+                            <li>Device information (hardware model, operating system, unique device identifiers)</li>
+                            <li>IP address and network information</li>
+                            <li>Game crash reports and performance data</li>
+                            <li>Cookies and similar tracking technologies</li>
+                        </ul>
+                    </section>
+                    
+                    <section class="mb-8">
+                        <h3 class="text-xl font-semibold text-slate-800 mb-4">3. How We Use Your Information</h3>
+                        <p class="text-slate-700 mb-4">We use the information we collect for various purposes, including:</p>
+                        <ul class="list-disc pl-6 text-slate-700 space-y-2 mb-4">
+                            <li>To provide, maintain, and improve our Services</li>
+                            <li>To create and manage your account</li>
+                            <li>To process transactions and deliver purchased virtual items</li>
+                            <li>To personalize your gaming experience</li>
+                            <li>To monitor and analyze usage patterns and trends</li>
+                            <li>To detect, prevent, and address technical issues and security concerns</li>
+                            <li>To communicate with you about updates, promotions, and support</li>
+                            <li>To enforce our Terms of Service and other policies</li>
+                            <li>To comply with legal obligations</li>
+                        </ul>
+                    </section>
+                    
+                    <section class="mb-8">
+                        <h3 class="text-xl font-semibold text-slate-800 mb-4">4. Information Sharing and Disclosure</h3>
+                        <p class="text-slate-700 mb-4">We do not sell your personal information to third parties. We may share your information in the following circumstances:</p>
+                        
+                        <h4 class="text-lg font-medium text-slate-800 mb-2">Service Providers</h4>
+                        <p class="text-slate-700 mb-4">We may share your information with third-party service providers who perform services on our behalf, such as:</p>
+                        <ul class="list-disc pl-6 text-slate-700 space-y-2 mb-4">
+                            <li>Payment processing</li>
+                            <li>Data analysis and storage</li>
+                            <li>Customer support</li>
+                            <li>Marketing and advertising (with appropriate consent where required)</li>
+                        </ul>
+                        
+                        <h4 class="text-lg font-medium text-slate-800 mb-2">Legal Requirements</h4>
+                        <p class="text-slate-700 mb-4">We may disclose your information if required to do so by law or in response to valid requests by public authorities (e.g., a court or government agency).</p>
+                        
+                        <h4 class="text-lg font-medium text-slate-800 mb-2">Business Transfers</h4>
+                        <p class="text-slate-700 mb-4">If we are involved in a merger, acquisition, or sale of all or a portion of our assets, your information may be transferred as part of that transaction.</p>
+                        
+                        <h4 class="text-lg font-medium text-slate-800 mb-2">With Your Consent</h4>
+                        <p class="text-slate-700 mb-4">We may share your information with third parties when we have your consent to do so.</p>
+                    </section>
+                    
+                    <section class="mb-8">
+                        <h3 class="text-xl font-semibold text-slate-800 mb-4">5. Data Security</h3>
+                        <p class="text-slate-700 mb-4">We implement appropriate technical and organizational security measures designed to protect your personal information from unauthorized access, alteration, disclosure, or destruction. These measures include:</p>
+                        <ul class="list-disc pl-6 text-slate-700 space-y-2 mb-4">
+                            <li>Encryption of sensitive data</li>
+                            <li>Regular security assessments and testing</li>
+                            <li>Access controls and authentication mechanisms</li>
+                            <li>Secure network infrastructure</li>
+                        </ul>
+                        <p class="text-slate-700 mb-4">While we strive to protect your personal information, no method of transmission over the Internet or electronic storage is 100% secure. Therefore, we cannot guarantee its absolute security.</p>
+                    </section>
+                    
+                    <section class="mb-8">
+                        <h3 class="text-xl font-semibold text-slate-800 mb-4">6. Data Retention</h3>
+                        <p class="text-slate-700 mb-4">We retain your personal information for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required or permitted by law. When we no longer need to use your information, we will remove it from our systems and records or take steps to anonymize it so that you can no longer be identified from it.</p>
+                    </section>
+                    
+                    <section class="mb-8">
+                        <h3 class="text-xl font-semibold text-slate-800 mb-4">7. Your Rights and Choices</h3>
+                        <p class="text-slate-700 mb-4">Depending on your location, you may have certain rights regarding your personal information, including:</p>
+                        <ul class="list-disc pl-6 text-slate-700 space-y-2 mb-4">
+                            <li><strong>Access:</strong> The right to request access to the personal information we hold about you</li>
+                            <li><strong>Correction:</strong> The right to request correction of inaccurate or incomplete personal information</li>
+                            <li><strong>Deletion:</strong> The right to request deletion of your personal information</li>
+                            <li><strong>Restriction:</strong> The right to request restriction of processing of your personal information</li>
+                            <li><strong>Portability:</strong> The right to receive your personal information in a structured, machine-readable format</li>
+                            <li><strong>Objection:</strong> The right to object to processing of your personal information</li>
+                            <li><strong>Withdraw Consent:</strong> The right to withdraw your consent at any time where we rely on consent to process your personal information</li>
+                        </ul>
+                        <p class="text-slate-700 mb-4">To exercise these rights, please contact us using the information provided in the "Contact Us" section below.</p>
+                    </section>
+                    
+                    <section class="mb-8">
+                        <h3 class="text-xl font-semibold text-slate-800 mb-4">8. International Data Transfers</h3>
+                        <p class="text-slate-700 mb-4">Your personal information may be transferred to, and processed in, countries other than the country in which you are resident. These countries may have data protection laws that are different from the laws of your country.</p>
+                        <p class="text-slate-700 mb-4">We take appropriate safeguards to ensure that your personal information remains protected in accordance with this Privacy Policy when transferred internationally, including through the use of standard contractual clauses or other approved mechanisms.</p>
+                    </section>
+                    
+                    <section class="mb-8">
+                        <h3 class="text-xl font-semibold text-slate-800 mb-4">9. Children's Privacy</h3>
+                        <p class="text-slate-700 mb-4">Our Services are not directed to individuals under the age of 13 (or the applicable age of digital consent in your country), and we do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided us with personal information, please contact us. If we become aware that we have collected personal information from a child under the applicable age without verification of parental consent, we will take steps to remove that information from our servers.</p>
+                    </section>
+                    
+                    <section class="mb-8">
+                        <h3 class="text-xl font-semibold text-slate-800 mb-4">10. Cookies and Tracking Technologies</h3>
+                        <p class="text-slate-700 mb-4">We use cookies and similar tracking technologies to track activity on our Services and store certain information. Cookies are files with a small amount of data that may include an anonymous unique identifier.</p>
+                        <p class="text-slate-700 mb-4">You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our Services.</p>
+                    </section>
+                    
+                    <section class="mb-8">
+                        <h3 class="text-xl font-semibold text-slate-800 mb-4">11. Third-Party Services</h3>
+                        <p class="text-slate-700 mb-4">Our Services may contain links to third-party websites or services that are not operated by us. If you click on a third-party link, you will be directed to that third party's site. We strongly advise you to review the Privacy Policy of every site you visit.</p>
+                        <p class="text-slate-700 mb-4">We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.</p>
+                    </section>
+                    
+                    <section class="mb-8">
+                        <h3 class="text-xl font-semibold text-slate-800 mb-4">12. Changes to This Privacy Policy</h3>
+                        <p class="text-slate-700 mb-4">We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.</p>
+                        <p class="text-slate-700 mb-4">We will let you know via email and/or a prominent notice on our Services prior to the change becoming effective and update the "effective date" at the top of this Privacy Policy. You are advised to review this Privacy Policy periodically for any changes.</p>
+                    </section>
+                    
+                    <section class="mb-8">
+                        <h3 class="text-xl font-semibold text-slate-800 mb-4">13. Contact Us</h3>
+                        <p class="text-slate-700 mb-4">If you have any questions about this Privacy Policy, please contact us:</p>
+                        <p class="text-slate-700 mb-2">Embark Studios AB</p>
+                        <p class="text-slate-700 mb-2">Riddargatan 17D</p>
+                        <p class="text-slate-700 mb-2">114 57 Stockholm, Sweden</p>
+                        <p class="text-slate-700 mb-2">Email: privacy@embark-studios.com</p>
+                        <p class="text-slate-700 mb-2">Data Protection Officer: dpo@embark-studios.com</p>
+                    </section>
+                </div>
+            </div>
+            
+            <div class="bg-slate-50 p-6 rounded-lg border border-slate-200">
+                <h3 class="text-lg font-semibold text-slate-800 mb-4">Your Privacy Choices</h3>
+                <p class="text-slate-700 mb-4">You can manage your privacy settings within the game or by contacting us directly.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="settings.html" class="bg-arc-blue-500 text-white px-4 py-2 rounded-md text-center hover:bg-arc-blue-600 transition-colors">Manage Privacy Settings</a>
+                    <a href="contact.html" class="bg-slate-200 text-slate-700 px-4 py-2 rounded-md text-center hover:bg-slate-300 transition-colors">Contact Privacy Team</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 bg-gradient-to-br from-arc-blue-600 to-arc-orange-500 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold">AR</span>
+                        </div>
+                        <h2 class="text-xl font-bold text-white">ARC RAIDERS</h2>
+                    </div>
+                    <p class="text-slate-300 mb-4">The Resistance Starts Now. Join the fight to reclaim our world from the relentless ARC threat.</p>
+                    <a href="https://store.steampowered.com/app/1808500/ARC_Raiders/" target="_blank" rel="noopener noreferrer" class="cta-button inline-block text-white font-bold px-6 py-3 rounded-md">Play Now on Steam</a>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="terms-of-service.html" class="text-slate-300 hover:text-white transition-colors">Terms of Service</a></li>
+                        <li><a href="privacy-policy.html" class="text-slate-300 hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="cookies.html" class="text-slate-300 hover:text-white transition-colors">Cookie Policy</a></li>
+                        <li><a href="eula.html" class="text-slate-300 hover:text-white transition-colors">EULA</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Support</h3>
+                    <ul class="space-y-2">
+                        <li><a href="faq.html" class="text-slate-300 hover:text-white transition-colors">FAQ</a></li>
+                        <li><a href="contact.html" class="text-slate-300 hover:text-white transition-colors">Contact Us</a></li>
+                        <li><a href="https://discord.gg/arcraiders" target="_blank" class="text-slate-300 hover:text-white transition-colors">Community Discord</a></li>
+                        <li><a href="status.html" class="text-slate-300 hover:text-white transition-colors">Server Status</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-700 mt-8 pt-8 text-center">
+                <p class="text-slate-400 text-sm">© 2023 Embark Studios AB. All rights reserved. ARC Raiders and the ARC Raiders logo are trademarks of Embark Studios AB.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Add smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

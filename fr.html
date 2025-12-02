@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARC Raiders : La Résistance Commence Maintenant | Site Officiel</title>
+    <meta name="description" content="ARC Raiders est un jeu de tir coopératif gratuit en troisième personne où vous combattez pour survivre à une menace mécanisée implacable en provenance de l'orbite.">
+    <link rel="canonical" href="http://arcraider.org/">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'arc-blue': {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                        },
+                        'arc-orange': {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            200: '#fed7aa',
+                            300: '#fdba74',
+                            400: '#fb923c',
+                            500: '#f97316',
+                            600: '#ea580c',
+                            700: '#c2410c',
+                            800: '#9a3412',
+                            900: '#7c2d12',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #1e293b;
+            background-color: #f8fafc;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.9)), 
+                        url('https://onlinegamedayday.com/m1.png');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #cbd5e1, transparent);
+        }
+        
+        .feature-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        
+        .how-to-play-step {
+            counter-increment: step-counter;
+        }
+        
+        .how-to-play-step::before {
+            content: counter(step-counter);
+            background-color: #1e40af;
+            color: white;
+            border-radius: 50%;
+            width: 2rem;
+            height: 2rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 0.75rem;
+            font-weight: 600;
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        .game-image {
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .game-image:hover {
+            transform: scale(1.02);
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 4rem 1rem;
+            }
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #f97316;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .cta-button {
+            background: linear-gradient(135deg, #1e40af 0%, #f97316 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(30, 64, 175, 0.3);
+        }
+        
+        .logo-text {
+            background: linear-gradient(135deg, #1e40af 0%, #f97316 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="bg-slate-50">
+    <!-- Header with Logo -->
+    <header class="bg-white shadow-sm sticky top-0 z-10">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <!-- Logo -->
+                <div class="w-10 h-10 bg-gradient-to-br from-arc-blue-600 to-arc-orange-500 rounded-lg flex items-center justify-center">
+                    <span class="text-white font-bold text-lg">AR</span>
+                </div>
+                <h1 class="text-xl font-bold logo-text">ARC RAIDERS</h1>
+            </div>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#overview" class="nav-link text-slate-700 hover:text-slate-900 font-medium">Aperçu</a></li>
+                    <li><a href="#how-to-play" class="nav-link text-slate-700 hover:text-slate-900 font-medium">Comment Jouer</a></li>
+                    <li><a href="#video" class="nav-link text-slate-700 hover:text-slate-900 font-medium">Vidéo</a></li>
+                    <li><a href="https://store.steampowered.com/app/1808500/ARC_Raiders/" target="_blank" rel="noopener noreferrer" class="cta-button text-white px-4 py-2 rounded-md font-medium">Jouer Maintenant</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-white py-20 md:py-32">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">ARC Raiders : La Résistance Commence Maintenant.</h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto mb-8">La Terre ne nous appartient plus. La Lutte pour la Récupérer a Commencé.</p>
+            <a href="https://store.steampowered.com/app/1808500/ARC_Raiders/" target="_blank" rel="noopener noreferrer" class="cta-button inline-block text-white font-bold px-8 py-4 rounded-md text-lg">Rejoignez la Résistance</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <!-- Overview Section -->
+        <section id="overview" class="mb-16">
+            <h2 class="text-3xl font-bold text-slate-900 mb-8">Bienvenue sur la Ligne de Front</h2>
+            
+            <div class="bg-white rounded-xl shadow-sm p-6 mb-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-6">
+                    <div>
+                        <p class="text-lg mb-6">Bienvenue sur la ligne de front du dernier bastion de l'humanité. ARC Raiders est un jeu de tir coopératif gratuit en troisième personne où vous et votre escouade de Raiders combattez pour survivre à une menace mécanisée implacable en provenance de l'orbite. La Terre a été réduite au silence, son futur suspendu à un fil. En tant que Raider, vous êtes un héros improbable, forgé dans les ruines de notre monde, prêt à riposter contre la force écrasante de l'ARC.</p>
+                    </div>
+                    <div>
+                        <img src="https://onlinegamedayday.com/m1.png" alt="Environnement de jeu d'ARC Raiders" class="w-full h-64 object-cover game-image">
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold text-slate-800 mb-4">Le Monde</h3>
+                        <p class="text-slate-700 mb-4">Un monde autrefois familier gît dans une belle décadence. Les cieux, autrefois symbole de liberté, sont maintenant un conduit de destruction, déversant un ennemi mystérieux et impitoyable connu sous le nom d'ARC. En tant que Raider, vous naviguerez dans des paysages magnifiques mais dangereux - des étendues urbaines oubliées aux côtes désolées - chacun détenant des secrets du passé et la clé de notre avenir.</p>
+                        <img src="https://onlinegamedayday.com/m1.png" alt="Monde post-apocalyptique dans ARC Raiders" class="w-full h-48 object-cover game-image mt-2">
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-slate-800 mb-4">La Menace - ARC</h3>
+                        <p class="text-slate-700 mb-4">ARC est une force d'invasion automatisée et impitoyable de machines colossales. Leur origine et leur but sont inconnus, mais leur directive est claire : éradiquer toutes les formes de résistance. Elles sont adaptatives, persistantes et fonctionnent avec une intelligence semblable à une ruche. Des chasseurs-tueurs agiles aux colosses gigantesques, vous devez apprendre leurs schémas, exploiter leurs faiblesses et travailler ensemble pour les abattre.</p>
+                        <img src="https://onlinegamedayday.com/m1.png" alt="Conception des ennemis ARC" class="w-full h-48 object-cover game-image mt-2">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-sm p-6 mb-8">
+                <h3 class="text-2xl font-semibold text-slate-800 mb-6">Devenez un Raider</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-6">
+                    <div>
+                        <p class="text-lg mb-6">Vous n'êtes pas un soldat. Vous êtes un survivant, un récupérateur, un innovateur. Les Raiders sont un groupe disparate d'individus, unis par un objectif commun : vivre libre et riposter. Utilisez un bac à sable dynamique d'armes, de gadgets et de l'environnement lui-même pour déjouer votre ennemi. Votre intelligence, votre agilité et votre coopération sont vos plus grandes armes.</p>
+                    </div>
+                    <div>
+                        <img src="https://onlinegamedayday.com/m1.png" alt="Personnage Raider dans ARC Raiders" class="w-full h-64 object-cover game-image">
+                    </div>
+                </div>
+                
+                <h4 class="text-xl font-semibold text-slate-800 mb-4">Caractéristiques Principales</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="feature-card bg-slate-50 p-5 rounded-lg">
+                        <h5 class="font-semibold text-slate-900 mb-2">Survie Coopérative</h5>
+                        <p class="text-slate-700">Faites équipe avec des amis dans une expérience PvE basée sur le travail d'équipe et le gameplay émergent. Le succès dépend de votre capacité à vous coordonner, à réanimer et à élaborer des stratégies ensemble.</p>
+                    </div>
+                    <div class="feature-card bg-slate-50 p-5 rounded-lg">
+                        <h5 class="font-semibold text-slate-900 mb-2">Un Monde Dynamique et Vivant</h5>
+                        <p class="text-slate-700">Le monde d'ARC Raiders est en constante évolution. Les patrouilles et les attaques de l'ARC sont imprévisibles, créant des scénarios de combat uniques et palpitants à chaque fois que vous vous déployez.</p>
+                    </div>
+                    <div class="feature-card bg-slate-50 p-5 rounded-lg">
+                        <h5 class="font-semibold text-slate-900 mb-2">Combat en Bac à Sable</h5>
+                        <p class="text-slate-700">Il n'y a pas une seule façon de vaincre. Utilisez la physique à votre avantage, placez des pièges, utilisez un arsenal diversifié et combinez créativement vos outils pour surmonter des obstacles impossibles.</p>
+                    </div>
+                    <div class="feature-card bg-slate-50 p-5 rounded-lg">
+                        <h5 class="font-semibold text-slate-900 mb-2">Le Voyage du Raider</h5>
+                        <p class="text-slate-700">Progressez, personnalisez votre Raider unique et maîtrisez les arts de la guerre de guérilla pour devenir une légende de la résistance.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-gradient-to-br from-arc-blue-700 to-arc-orange-600 text-white rounded-xl shadow-sm p-8 text-center">
+                <h3 class="text-2xl font-bold mb-4">L'Appel aux Armes</h3>
+                <p class="text-lg mb-6">Le ciel est tombé. Il est temps de se lever. Rassemblez votre escouade, visez haut et rejoignez le combat pour récupérer notre monde.</p>
+                <p class="text-xl font-semibold">Rejoignez la Résistance. Devenez un Raider.</p>
+                <a href="https://store.steampowered.com/app/1808500/ARC_Raiders/" target="_blank" rel="noopener noreferrer" class="cta-button inline-block text-white font-bold px-8 py-3 rounded-md mt-6">Jouer Maintenant sur Steam</a>
+            </div>
+        </section>
+        
+        <div class="section-divider my-12"></div>
+        
+        <!-- Video Section -->
+        <section id="video" class="mb-16">
+            <h2 class="text-3xl font-bold text-slate-900 mb-8">Bande-annonce Officielle du Gameplay</h2>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/IpeJjQDXNAE?rel=0&modestbranding=1" title="Bande-annonce Officielle du Gameplay d'ARC Raiders" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <p class="text-center text-slate-600 mt-4">Si la vidéo ne se charge pas, <a href="https://youtu.be/IpeJjQDXNAE" target="_blank" class="text-arc-blue-600 hover:underline">regardez-la directement sur YouTube</a></p>
+        </section>
+        
+        <div class="section-divider my-12"></div>
+        
+        <!-- How to Play Section -->
+        <section id="how-to-play" class="mb-16">
+            <h2 class="text-3xl font-bold text-slate-900 mb-2">Comment Jouer à ARC Raiders</h2>
+            <p class="text-xl text-slate-700 mb-8">Un Guide pour Survivre à la Menace ARC</p>
+            
+            <div class="bg-white rounded-xl shadow-sm p-6 mb-8">
+                <h3 class="text-2xl font-semibold text-slate-800 mb-6">Formez votre Escouade. Combattez avec Intelligence. Survivez à l'Assaut.</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    <div>
+                        <h4 class="text-xl font-semibold text-slate-800 mb-4">La Boucle Principale : Coopération et Chaos</h4>
+                        <p class="text-lg mb-6">ARC Raiders est un jeu de tir coopératif gratuit en troisième personne où le travail d'équipe et l'adaptabilité sont vos clés de la survie. La boucle de gameplay principale tourne autour de la formation d'une escouade, du déploiement dans un monde ouvert hostile, de l'accomplissement d'objectifs, de l'affrontement de machines ARC massives et de l'extraction contre vents et marées.</p>
+                    </div>
+                    <div>
+                        <img src="https://onlinegamedayday.com/m1.png" alt="Gameplay d'ARC Raiders" class="w-full h-64 object-cover game-image">
+                    </div>
+                </div>
+                
+                <div class="space-y-8">
+                    <div class="how-to-play-step">
+                        <h5 class="text-lg font-semibold text-slate-900 mb-2">1. Avant le Déploiement : Formez votre Escouade et votre Équipement</h5>
+                        <p class="text-slate-700 mb-4">Le succès commence avant même de mettre le pied sur le champ de bataille.</p>
+                        <ul class="list-disc pl-6 text-slate-700 space-y-2">
+                            <li><strong>Formez votre Équipe de Combat :</strong> Faites équipe avec des amis ou faites correspondre avec d'autres joueurs. Une escouade coordonnée de 2-3 Raiders est essentielle pour relever les défis à venir.</li>
+                            <li><strong>Choisissez vos Outils :</strong> Personnalisez votre équipement. Cela inclut la sélection d'armes primaires et secondaires (par exemple, fusils d'assaut, fusils de sniper, fusils à pompe) et d'une suite de gadgets tactiques. Vos choix doivent compléter la composition de votre équipe.</li>
+                            <li><strong>Gadgets Clés :</strong> Le Grappin est vital pour la mobilité rapide, l'escalade des falaises et l'évitement des ennemis. La Tourelle fournit un tir de couverture automatisé. D'autres gadgets comme les grenades, les boucliers ou les dispositifs de soins dicteront votre rôle dans l'escouade.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="how-to-play-step">
+                        <h5 class="text-lg font-semibold text-slate-900 mb-2">2. Sur le Terrain : Tactiques et Survie</h5>
+                        <p class="text-slate-700 mb-4">Une fois déployé, le monde est dynamique et dangereux. Votre mission n'est pas seulement de tirer, mais de déjouer votre ennemi.</p>
+                        <ul class="list-disc pl-6 text-slate-700 space-y-2">
+                            <li><strong>Déplacez-vous comme un Raider :</strong> Utilisez l'environnement à votre avantage. Le grappin n'est pas seulement pour voyager - utilisez-le pour gagner un terrain élevé pour un avantage tactique, contourner rapidement les ennemis ou échapper à une situation mortelle. Restez en mouvement ; rester immobile est une condamnation à mort.</li>
+                            <li><strong>Identifiez et Exploitez les Points Faibles de l'Ennemi :</strong> Les machines ARC sont lourdement blindées, mais elles ont des vulnérabilités. Scannez vos cibles et visez les points faibles brillants, les noyaux d'énergie ou les articulations exposées pour infliger des dégâts maximum.</li>
+                            <li><strong>Utilisez la Physique comme Arme :</strong> Le monde est votre arsenal. Donnez des coups de pied aux objets pour créer des distractions, utilisez des barils explosifs pour déclencher des réactions en chaîne et tirez parti de l'environnement pour tendre des embuscades.</li>
+                            <li><strong>Système de Ping :</strong> La communication constante est essentielle. Utilisez le système de ping intuitif pour marquer les positions ennemies, mettre en évidence les ressources ou indiquer des positions stratégiques à vos coéquipiers sans avoir besoin du chat vocal.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center my-8">
+                        <div>
+                            <img src="https://onlinegamedayday.com/m1.png" alt="Stratégie de combat dans ARC Raiders" class="w-full h-64 object-cover game-image">
+                        </div>
+                        <div>
+                            <div class="how-to-play-step">
+                                <h5 class="text-lg font-semibold text-slate-900 mb-2">3. Affronter l'ARC : Stratégie sur la Force Brute</h5>
+                                <p class="text-slate-700 mb-4">Vous rencontrerez une variété d'ennemis ARC, des petits éclaireurs aux colosses imposants.</p>
+                                <ul class="list-disc pl-6 text-slate-700 space-y-2">
+                                    <li><strong>Éclairez et Planifiez :</strong> Ne vous précipitez pas aveuglément. Observez les routes de patrouille et identifiez les types d'ennemis que vous affrontez.</li>
+                                    <li><strong>Divisez et Conquérez :</strong> Dans une escouade, attribuez des rôles. Qu'un joueur attire l'attention pendant que d'autres flanquent. Concentrez le feu sur une seule cible haute priorité pour éliminer les menaces rapidement.</li>
+                                    <li><strong>Adaptez-vous à la Volée :</strong> L'ARC s'adapte. Si un assaut direct ne fonctionne pas, changez de tactique. Repliez-vous vers une position plus défendable, utilisez des tactiques de frapper et courir ou établissez une zone de mise à mort avec des pièges et des tourelles.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="how-to-play-step">
+                        <h5 class="text-lg font-semibold text-slate-900 mb-2">4. Le Travail d'Équipe n'est pas Négociable</h5>
+                        <p class="text-slate-700 mb-4">C'est la règle la plus importante d'être un Raider.</p>
+                        <ul class="list-disc pl-6 text-slate-700 space-y-2">
+                            <li><strong>Réanimez et Soutenez :</strong> Lorsqu'un coéquipier tombe, priorisez sa réanimation. Couvrez-le pendant qu'il se relève. Partagez les ressources et les munitions.</li>
+                            <li><strong>Restez Ensemble :</strong> Un Raider solitaire est un Raider mort. Il y a de la force dans le nombre. Le feu coordonné et les gadgets partagés surmonteront des défis impossibles à affronter seul.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="how-to-play-step">
+                        <h5 class="text-lg font-semibold text-slate-900 mb-2">5. L'Objectif : Complétez et Extrayez</h5>
+                        <p class="text-slate-700 mb-4">Votre mission n'est pas terminée tant que vous ne vous êtes pas extrait en sécurité.</p>
+                        <ul class="list-disc pl-6 text-slate-700 space-y-2">
+                            <li><strong>Complétez des Objectifs Dynamiques :</strong> Le monde vous présentera diverses tâches, de la destruction d'actifs ARC clés à la sécurisation de renseignements précieux. Travaillez ensemble pour les accomplir.</li>
+                            <li><strong>Survivez à l'Extraction :</strong> Une fois votre objectif principal terminé, vous devez appeler et sécuriser un point d'extraction. Cela déclenche souvent une vague finale et intense de forces ARC. Tenez la ligne, protégez la zone et assurez-vous que toute votre escouade s'en sorte vivante pour réclamer vos récompenses.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="mt-8 p-6 bg-gradient-to-r from-arc-blue-50 to-arc-orange-50 rounded-lg border border-arc-blue-200">
+                    <h5 class="text-lg font-semibold text-slate-900 mb-2">Devenez un Maître Raider</h5>
+                    <p class="text-slate-700">Maîtrisez le mouvement, apprenez les schémas ennemis, communiquez avec votre équipe et utilisez créativement tous les outils à votre disposition. L'ARC est un ennemi implacable, mais avec de l'habileté et de la coopération, vous pouvez riposter et récupérer notre monde.</p>
+                    <p class="text-slate-900 font-medium mt-4">À bientôt sur la ligne de front, Raider.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-8 h-8 bg-gradient-to-br from-arc-blue-600 to-arc-orange-500 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold">AR</span>
+                        </div>
+                        <h2 class="text-xl font-bold text-white">ARC RAIDERS</h2>
+                    </div>
+                    <p class="mt-2 text-slate-300">La Résistance Commence Maintenant.</p>
+                </div>
+                
+                <div class="text-center md:text-right">
+                    <a href="https://store.steampowered.com/app/1808500/ARC_Raiders/" target="_blank" rel="noopener noreferrer" class="cta-button inline-block text-white font-bold px-6 py-3 rounded-md">Jouer Maintenant sur Steam</a>
+                    <p class="mt-4 text-slate-400 text-sm">© 2023 ARC Raiders. Tous droits réservés.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Add smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

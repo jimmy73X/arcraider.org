@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARC Raiders：抵抗从现在开始 | 官方网站</title>
+    <meta name="description" content="ARC Raiders是一款免费的合作第三人称射击游戏，你需要与ARC小队的战友们共同对抗来自轨道的无情机械化威胁。">
+    <link rel="canonical" href="http://arcraider.org/">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'arc-blue': {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                        },
+                        'arc-orange': {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            200: '#fed7aa',
+                            300: '#fdba74',
+                            400: '#fb923c',
+                            500: '#f97316',
+                            600: '#ea580c',
+                            700: '#c2410c',
+                            800: '#9a3412',
+                            900: '#7c2d12',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            color: #1e293b;
+            background-color: #f8fafc;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Orbitron', 'Microsoft YaHei', sans-serif;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.9)), 
+                        url('https://onlinegamedayday.com/m1.png');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #cbd5e1, transparent);
+        }
+        
+        .feature-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        
+        .how-to-play-step {
+            counter-increment: step-counter;
+        }
+        
+        .how-to-play-step::before {
+            content: counter(step-counter);
+            background-color: #1e40af;
+            color: white;
+            border-radius: 50%;
+            width: 2rem;
+            height: 2rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 0.75rem;
+            font-weight: 600;
+            font-family: 'Orbitron', 'Microsoft YaHei', sans-serif;
+        }
+        
+        .game-image {
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .game-image:hover {
+            transform: scale(1.02);
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 4rem 1rem;
+            }
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #f97316;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .cta-button {
+            background: linear-gradient(135deg, #1e40af 0%, #f97316 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(30, 64, 175, 0.3);
+        }
+        
+        .logo-text {
+            background: linear-gradient(135deg, #1e40af 0%, #f97316 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="bg-slate-50">
+    <!-- Header with Logo -->
+    <header class="bg-white shadow-sm sticky top-0 z-10">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <!-- Logo -->
+                <div class="w-10 h-10 bg-gradient-to-br from-arc-blue-600 to-arc-orange-500 rounded-lg flex items-center justify-center">
+                    <span class="text-white font-bold text-lg">AR</span>
+                </div>
+                <h1 class="text-xl font-bold logo-text">ARC RAIDERS</h1>
+            </div>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#overview" class="nav-link text-slate-700 hover:text-slate-900 font-medium">游戏概览</a></li>
+                    <li><a href="#how-to-play" class="nav-link text-slate-700 hover:text-slate-900 font-medium">如何游玩</a></li>
+                    <li><a href="#video" class="nav-link text-slate-700 hover:text-slate-900 font-medium">视频</a></li>
+                    <li><a href="https://store.steampowered.com/app/1808500/ARC_Raiders/" target="_blank" rel="noopener noreferrer" class="cta-button text-white px-4 py-2 rounded-md font-medium">立即游玩</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-white py-20 md:py-32">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">ARC Raiders：抵抗从现在开始</h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto mb-8">地球不再属于我们。夺回地球的战斗已经开始。</p>
+            <a href="https://store.steampowered.com/app/1808500/ARC_Raiders/" target="_blank" rel="noopener noreferrer" class="cta-button inline-block text-white font-bold px-8 py-4 rounded-md text-lg">加入抵抗军</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <!-- Overview Section -->
+        <section id="overview" class="mb-16">
+            <h2 class="text-3xl font-bold text-slate-900 mb-8">欢迎来到前线</h2>
+            
+            <div class="bg-white rounded-xl shadow-sm p-6 mb-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-6">
+                    <div>
+                        <p class="text-lg mb-6">欢迎来到人类最后防线的战场前线。ARC Raiders是一款免费的合作第三人称射击游戏，你需要与ARC小队的战友们共同对抗来自轨道的无情机械化威胁。地球已被征服，其未来悬于一线。作为一名Raider，你是一个不太可能的英雄，在我们世界的废墟中锻造而成，准备好对抗ARC的压倒性力量。</p>
+                    </div>
+                    <div>
+                        <img src="https://onlinegamedayday.com/m1.png" alt="ARC Raiders游戏环境" class="w-full h-64 object-cover game-image">
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold text-slate-800 mb-4">世界设定</h3>
+                        <p class="text-slate-700 mb-4">一个曾经熟悉的世界正处于美丽的衰败中。曾经象征自由的天空，现在成为了毁灭的通道，降下一种被称为ARC的神秘而无情的敌人。作为一名Raider，你将穿越壮观而危险的景观——从被遗忘的都市蔓延到荒凉的海岸线——每一个都藏着过去的秘密和我们未来的关键。</p>
+                        <img src="https://onlinegamedayday.com/m1.png" alt="ARC Raiders中的末日世界" class="w-full h-48 object-cover game-image mt-2">
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-slate-800 mb-4">威胁 - ARC</h3>
+                        <p class="text-slate-700 mb-4">ARC是一种自动化的、无情的巨大机器入侵力量。它们的起源和目的未知，但它们的目标很明确：消灭所有形式的抵抗。它们具有适应性、持久性，并以蜂巢般的智能运作。从敏捷的猎杀者到巨大的巨兽，你必须学习它们的模式，利用它们的弱点，并共同努力击倒它们。</p>
+                        <img src="https://onlinegamedayday.com/m1.png" alt="ARC敌人设计" class="w-full h-48 object-cover game-image mt-2">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-sm p-6 mb-8">
+                <h3 class="text-2xl font-semibold text-slate-800 mb-6">成为一名Raider</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-6">
+                    <div>
+                        <p class="text-lg mb-6">你不是一名士兵。你是一个幸存者，一个拾荒者，一个创新者。Raiders是一群不同的个体，团结在一个共同的目标下：自由生活并战斗。利用武器、装备和环境本身的动态沙盒来智胜你的敌人。你的智慧、敏捷性和合作精神是你最强大的武器。</p>
+                    </div>
+                    <div>
+                        <img src="https://onlinegamedayday.com/m1.png" alt="ARC Raiders中的Raider角色" class="w-full h-64 object-cover game-image">
+                    </div>
+                </div>
+                
+                <h4 class="text-xl font-semibold text-slate-800 mb-4">主要特色</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="feature-card bg-slate-50 p-5 rounded-lg">
+                        <h5 class="font-semibold text-slate-900 mb-2">合作生存</h5>
+                        <p class="text-slate-700">与朋友组队参加基于团队合作和即时玩法的PvE体验。成功取决于你协调、复活和共同制定策略的能力。</p>
+                    </div>
+                    <div class="feature-card bg-slate-50 p-5 rounded-lg">
+                        <h5 class="font-semibold text-slate-900 mb-2">动态且鲜活的世界</h5>
+                        <p class="text-slate-700">ARC Raiders的世界在不断变化。ARC的巡逻和攻击是不可预测的，每次你进入游戏都会创造独特而刺激的战斗场景。</p>
+                    </div>
+                    <div class="feature-card bg-slate-50 p-5 rounded-lg">
+                        <h5 class="font-semibold text-slate-900 mb-2">沙盒式战斗</h5>
+                        <p class="text-slate-700">胜利没有单一的方式。利用物理优势，设置陷阱，使用多样化的武器库，并创造性地组合你的工具来克服不可能的困难。</p>
+                    </div>
+                    <div class="feature-card bg-slate-50 p-5 rounded-lg">
+                        <h5 class="font-semibold text-slate-900 mb-2">Raider的旅程</h5>
+                        <p class="text-slate-700">不断进步，定制你独特的Raider，掌握游击战术的艺术，成为抵抗军的传奇。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-gradient-to-br from-arc-blue-700 to-arc-orange-600 text-white rounded-xl shadow-sm p-8 text-center">
+                <h3 class="text-2xl font-bold mb-4">战斗的召唤</h3>
+                <p class="text-lg mb-6">天空已经坠落。是时候崛起了。集结你的小队，瞄准高处，加入夺回我们世界的战斗。</p>
+                <p class="text-xl font-semibold">加入抵抗军。成为一名Raider。</p>
+                <a href="https://store.steampowered.com/app/1808500/ARC_Raiders/" target="_blank" rel="noopener noreferrer" class="cta-button inline-block text-white font-bold px-8 py-3 rounded-md mt-6">在Steam上立即游玩</a>
+            </div>
+        </section>
+        
+        <div class="section-divider my-12"></div>
+        
+        <!-- Video Section -->
+        <section id="video" class="mb-16">
+            <h2 class="text-3xl font-bold text-slate-900 mb-8">官方游戏玩法预告片</h2>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/IpeJjQDXNAE?rel=0&modestbranding=1" title="ARC Raiders官方游戏玩法预告片" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <p class="text-center text-slate-600 mt-4">如果视频无法加载，<a href="https://youtu.be/IpeJjQDXNAE" target="_blank" class="text-arc-blue-600 hover:underline">直接在YouTube上观看</a></p>
+        </section>
+        
+        <div class="section-divider my-12"></div>
+        
+        <!-- How to Play Section -->
+        <section id="how-to-play" class="mb-16">
+            <h2 class="text-3xl font-bold text-slate-900 mb-2">如何游玩ARC Raiders</h2>
+            <p class="text-xl text-slate-700 mb-8">在ARC威胁下生存的指南</p>
+            
+            <div class="bg-white rounded-xl shadow-sm p-6 mb-8">
+                <h3 class="text-2xl font-semibold text-slate-800 mb-6">组建小队。智取敌人。在猛攻中生存。</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    <div>
+                        <h4 class="text-xl font-semibold text-slate-800 mb-4">核心循环：合作与混乱</h4>
+                        <p class="text-lg mb-6">ARC Raiders是一款免费的第三人称合作射击游戏，团队合作和适应性是你生存的关键。核心游戏循环围绕组建小队、部署到敌对开放世界、完成任务、对抗巨大的ARC机器，并在困难重重中撤离。</p>
+                    </div>
+                    <div>
+                        <img src="https://onlinegamedayday.com/m1.png" alt="ARC Raiders游戏玩法" class="w-full h-64 object-cover game-image">
+                    </div>
+                </div>
+                
+                <div class="space-y-8">
+                    <div class="how-to-play-step">
+                        <h5 class="text-lg font-semibold text-slate-900 mb-2">1. 部署前：组建小队和装备配置</h5>
+                        <p class="text-slate-700 mb-4">成功在你踏上战场之前就开始了。</p>
+                        <ul class="list-disc pl-6 text-slate-700 space-y-2">
+                            <li><strong>组建你的战斗队伍：</strong>与朋友组队或与其他玩家匹配。一个由2-3名Raiders组成的协调小队对于应对前方的挑战至关重要。</li>
+                            <li><strong>选择你的工具：</strong>自定义你的装备。这包括选择主武器和副武器（例如，突击步枪、狙击步枪、霰弹枪）以及一套战术装备。你的选择应该补充你团队的组成。</li>
+                            <li><strong>关键装备：</strong>抓钩对于快速移动、攀爬悬崖和躲避敌人至关重要。炮塔提供自动掩护火力。其他装备如手榴弹、护盾或治疗设备将决定你在小队中的角色。</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="how-to-play-step">
+                        <h5 class="text-lg font-semibold text-slate-900 mb-2">2. 在地面上：战术与生存</h5>
+                        <p class="text-slate-700 mb-4">一旦部署，世界就是动态而危险的。你的任务不仅仅是射击，而是要智胜你的敌人。</p>
+                        <ul class="list-disc pl-6 text-slate-700 space-y-2">
+                            <li><strong>像Raider一样移动：</strong>利用环境优势。抓钩不仅仅用于旅行——用它来获得高地以获得战术优势，迅速侧翼敌人，或逃离致命情况。保持移动；静止不动就是死亡。</li>
+                            <li><strong>识别并利用敌人的弱点：</strong>ARC机器有重型装甲，但它们有弱点。扫描你的目标，瞄准发光的弱点、能量核心或暴露的关节，造成最大伤害。</li>
+                            <li><strong>将物理作为武器：</strong>世界就是你的武器库。踢物体以制造干扰，使用爆炸桶引发连锁反应，并利用环境设置伏击。</li>
+                            <li><strong>标记系统：</strong>持续的沟通是关键。使用直观的标记系统来标记敌人位置、突出显示资源或向队友指示战略位置，而无需语音聊天。</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center my-8">
+                        <div>
+                            <img src="https://onlinegamedayday.com/m1.png" alt="ARC Raiders中的战斗策略" class="w-full h-64 object-cover game-image">
+                        </div>
+                        <div>
+                            <div class="how-to-play-step">
+                                <h5 class="text-lg font-semibold text-slate-900 mb-2">3. 对抗ARC：策略胜过蛮力</h5>
+                                <p class="text-slate-700 mb-4">你会遇到各种ARC敌人，从小型侦察兵到高大的巨兽。</p>
+                                <ul class="list-disc pl-6 text-slate-700 space-y-2">
+                                    <li><strong>侦察和计划：</strong>不要盲目冲入。观察巡逻路线，识别你面对的敌人类型。</li>
+                                    <li><strong>分而治之：</strong>在小队中分配角色。让一名玩家吸引注意力，而其他人侧翼。集中火力攻击单个高优先级目标，快速消除威胁。</li>
+                                    <li><strong>即时适应：</strong>ARC会适应。如果直接攻击无效，改变战术。撤退到更易防守的位置，使用打了就跑的战术，或用陷阱和炮塔设置杀戮区。</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="how-to-play-step">
+                        <h5 class="text-lg font-semibold text-slate-900 mb-2">4. 团队合作是不可谈判的</h5>
+                        <p class="text-slate-700 mb-4">这是成为一名Raider最重要的规则。</p>
+                        <ul class="list-disc pl-6 text-slate-700 space-y-2">
+                            <li><strong>复活和支持：</strong>当队友倒下时，优先复活他们。在他们起来时掩护他们。分享资源和弹药。</li>
+                            <li><strong>保持在一起：</strong>一个孤单的Raider就是一个死去的Raider。团结就是力量。协调的火力和共享的装备将克服那些不可能独自面对的挑战。</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="how-to-play-step">
+                        <h5 class="text-lg font-semibold text-slate-900 mb-2">5. 目标：完成任务并撤离</h5>
+                        <p class="text-slate-700 mb-4">直到你安全撤离，你的任务才算结束。</p>
+                        <ul class="list-disc pl-6 text-slate-700 space-y-2">
+                            <li><strong>完成动态目标：</strong>世界会向你展示各种任务，从摧毁关键的ARC资产到获取有价值的情报。共同努力完成它们。</li>
+                            <li><strong>在撤离中生存：</strong>一旦你的主要目标完成，你必须呼叫并保护一个撤离点。这通常会引发ARC部队的最后一波猛烈攻击。坚守防线，保护区域，并确保你的整个小队活着撤离，以获得奖励。</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="mt-8 p-6 bg-gradient-to-r from-arc-blue-50 to-arc-orange-50 rounded-lg border border-arc-blue-200">
+                    <h5 class="text-lg font-semibold text-slate-900 mb-2">成为大师级Raider</h5>
+                    <p class="text-slate-700">掌握移动技巧，学习敌人模式，与你的团队沟通，并创造性地使用你掌握的所有工具。ARC是无情的敌人，但凭借技巧和合作，你可以反击并夺回我们的世界。</p>
+                    <p class="text-slate-900 font-medium mt-4">前线见，Raider。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-8 h-8 bg-gradient-to-br from-arc-blue-600 to-arc-orange-500 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold">AR</span>
+                        </div>
+                        <h2 class="text-xl font-bold text-white">ARC RAIDERS</h2>
+                    </div>
+                    <p class="mt-2 text-slate-300">抵抗从现在开始。</p>
+                </div>
+                
+                <div class="text-center md:text-right">
+                    <a href="https://store.steampowered.com/app/1808500/ARC_Raiders/" target="_blank" rel="noopener noreferrer" class="cta-button inline-block text-white font-bold px-6 py-3 rounded-md">在Steam上立即游玩</a>
+                    <p class="mt-4 text-slate-400 text-sm">© 2023 ARC Raiders。保留所有权利。</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 为锚点链接添加平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
